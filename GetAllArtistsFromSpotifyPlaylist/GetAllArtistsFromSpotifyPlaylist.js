@@ -1,13 +1,1 @@
-javascript:(function(){
-	
-	var textual = ""; 
-	for(var a =0; a<document.getElementsByClassName("second-line").length; a++ )
-	{ 
-		textual += document.getElementsByClassName("second-line")[a].textContent + "\n"; 
-	}; 
-
-	textual = textual.replace(/Explicit/g, ""); 
-	textual = textual.replace(/•/g, " - "); 
-	console.log(textual);
-
-})();
+javascript:(function(){function copyStringToClipboard (str) {var el = document.createElement('textarea');el.value = str;el.setAttribute('readonly', '');el.style = {position: 'absolute', left: '-9999px'};document.body.appendChild(el);el.select();document.execCommand('copy');document.body.removeChild(el);}var textual = ""; for(var a =0; a<document.getElementsByClassName("second-line").length; a++ ){ textual += document.getElementsByClassName("second-line")[a].textContent + "\n"; }; textual = textual.replace(/Explicit/g, ""); textual = textual.replace(/•/g, " - "); copyStringToClipboard(textual);})();
